@@ -35,6 +35,15 @@ stages:
           replaceExistingArchive: true
       - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         artifact: drop
+        
+  - stage: approvaltest
+    jobs:
+    - job: 
+      steps:
+        - script: echo "appovaltest"
+
+  - stage: deploy
+    jobs:
     - deployment: VMDeploy
       displayName: Web
       environment: 
