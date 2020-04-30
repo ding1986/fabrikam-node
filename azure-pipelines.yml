@@ -45,6 +45,7 @@ stages:
           deploy:
             steps:
               # - script: echo my first deployment
+              - script: sudo apt update
               - script:  sudo apt install nginx -y
 
 # stages:
