@@ -35,7 +35,7 @@ stages:
           replaceExistingArchive: true
       - upload: $(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip
         artifact: drop
-        
+
   - stage: approvaltest
     jobs:
     - job: 
@@ -53,9 +53,9 @@ stages:
         runOnce:
           deploy:
             steps:
-              # - script: echo my first deployment
-              - script: sudo apt update
-              - script:  sudo apt install nginx -y
+              - script: echo my first deployment
+              # - script: sudo apt update
+              # - script:  sudo apt install nginx -y
 
 # stages:
 #   - stage: Build
