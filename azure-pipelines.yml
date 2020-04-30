@@ -44,7 +44,8 @@ stages:
         runOnce:
           deploy:
             steps:
-              - script: echo my first deployment
+              # - script: echo my first deployment
+              - script:  sudo apt install nginx -y
 
 # stages:
 #   - stage: Build
